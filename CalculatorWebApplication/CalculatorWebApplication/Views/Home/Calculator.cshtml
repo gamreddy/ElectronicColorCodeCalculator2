@@ -1,0 +1,35 @@
+﻿@model CalculatorWebApplication.Models.CalculatorViewModel
+
+<h2>@ViewBag.Message</h2>
+
+    <form action="/Home/Calculator" method="post">
+        @Html.LabelFor(m => m.SelectedAColor)
+        @Html.DropDownListFor(m => m.SelectedAColor, Model.SignificantColors, "Select Color")
+        @Html.ValidationMessageFor(m => m.SelectedAColor)
+        <br />
+        @Html.LabelFor(m => m.SelectedBColor)
+        @Html.DropDownListFor(m => m.SelectedBColor, Model.SignificantColors, "Select Color")
+        @Html.ValidationMessageFor(m => m.SelectedBColor)
+        <br />
+        @Html.LabelFor(m => m.SelectedCColor)
+        @Html.DropDownListFor(m => m.SelectedCColor, Model.Colors, "Select Color")
+        @Html.ValidationMessageFor(m => m.SelectedCColor)
+        <br />
+        @Html.LabelFor(m => m.SelectedDColor)
+        @Html.DropDownListFor(m => m.SelectedDColor, Model.Colors, "Select Color")
+        <br/>
+
+        <input type="submit" value="Calculate" />
+        <br/>
+        
+        @if(Model.OhmValueMin > 0)
+        {
+            <text> OhmValue: between @Model.OhmValueMin and @Model.OhmValueMax </text> 
+        }
+
+
+
+
+    </form>
+
+

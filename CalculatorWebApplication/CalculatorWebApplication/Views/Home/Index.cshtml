@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Electronic Color Code Calculator</h1>
+    <p class="lead">The electronic color code is used to indicate the values or ratings of electronic components, usually for resistors, but also for capacitors, inductors, diodes and others. This web application provides a web interface for Electronic Color Code Calculator.</p>
+    <p><a href="https://en.wikipedia.org/wiki/Electronic_color_code" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Resistors</h2>
+        <p>@Html.ActionLink("Calculator", "Calculator", "Home", null, new { @class = "btn btn-default" })</p>
+</div>
+    <div class="col-md-4">
+        <h2>Capacitors</h2>
+        <p>Under Construction!.</p>
+    </div>
+    <div class="col-md-4">
+        <h2>Others</h2>
+        <p>Under Construction!.</p>
+    </div>
+</div>
